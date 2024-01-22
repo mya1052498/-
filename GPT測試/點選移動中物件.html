@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Effect Example</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        var squareX = 50; // 正方形的初始 x 坐标
+        var squareWidth = 30; // 正方形的宽度
+        var squareColor = 'red'; // 正方形的颜色
+        var isSquareMovingRight = true; // 正方形是否向右移动
+
+        var clickX = -1; // 点击时的 x 坐标
+        var clickY = -1; // 点击时的 y 坐标
+        var clickRadius = 20; // 点击效果的半径
+        var clickColor = 'black'; // 点击效果的颜色
+        var clickDuration = 1000; // 点击效果的持续时间
+        var isClickVisible = false; // 是否显示点击效果
+
+        canvas.addEventListener('click', function(event) {
+            // 如果之前的点击效果还在显示，则不处理新的点击事件
+            if (isClickVisible) {
+                return;
+            }
+
+            // 获取点击的坐标
+            clickX = event.clientX - canvas.getBoundingClientRect().left;
+            clickY = event.clientY - canvas.getBoundingClientRect().top;
+
+            // 如果点击位置在正方形上，则显示点击效果
+            if (clickX >= squareX && clickX <= squareX + squareWidth &&
+                clickY >= 50 && clickY <= 100) {
+                isClickVisible = true;
+
+                // 设置定时器，1秒后隐藏点击效果
+                setTimeout(function() {
+                    isClickVisible = false;
+                }, clickDuration);
+            }
+        });
+
+        function animate() {
+            // 清空 Canvas
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 更新正方形位置
+            if (isSquareMovingRight) {
+                squareX += 1;
+                if (squareX + squareWidth > canvas.width) {
+                    isSquareMovingRight = false;
+                }
+            } else {
+                squareX -= 1;
+                if (squareX < 0) {
+                    isSquareMovingRight = true;
+                }
+            }
+
+            // 绘制正方形
+            context.fillStyle = squareColor;
+            context.fillRect(squareX, 50, squareWidth, 50);
+
+            // 绘制点击效果
+            if (isClickVisible) {
+                context.beginPath();
+                context.arc(squareX + squareWidth / 2, 75, clickRadius, 0, 2 * Math.PI);
+                context.strokeStyle = clickColor;
+                context.lineWidth = 2;
+                context.stroke();
+                context.closePath();
+            }
+
+            // 请求下一帧动画
+            requestAnimationFrame(animate);
+        }
+
+        // 启动动画
+        animate();
+    </script>
+</body>
+</html>
