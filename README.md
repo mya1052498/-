@@ -2,6 +2,7 @@
 專題名稱:找茶茶  
 內容:一款尋找可愛角色的網頁遊戲  
 前端製作人員:張永傑  
+[Finished product]("spot_the_difference.html)
 >參考資料  
 >[<JS教學>](http://www.ezonesoft.com.tw/JavaScript/)
 >[<遊戲程式參考:Wayfinder>](https://wayfinder.nfb.ca/)
