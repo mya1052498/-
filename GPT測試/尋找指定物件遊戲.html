@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尋找指定物件遊戲</title>
+    <!-- <link rel="stylesheet" href="../resetCss.css"> -->
+    <style>
+        /* 定義遊戲畫面樣式 */
+        #game-container {
+            max-width: 1000px;
+            width: 1000px;
+            height: 400px;
+            background-color: lightgray;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* 定義指定物件樣式 */
+        #target-object {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+        }
+        .title_main{
+            text-align:center;
+        }
+        .counterwrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title_main">尋找指定物件遊戲</h1>
+    <div id="game-container">
+        <div id="target-object"></div>
+    </div>
+    <div class="counterwrap">
+        <p class="counter">得分：<span id="score">0</span></p>
+    </div>
+    <script>
+        // 獲取遊戲元素
+        var targetObject = document.getElementById("target-object");
+        var scoreDisplay = document.getElementById("score");
+
+        // 設定初始分數
+        var score = 0;
+
+        // 隨機生成指定物件的位置
+        function generateRandomPosition() {
+            var maxX = 950; // 避免物件超出邊界
+            var maxY = 350;
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            targetObject.style.left = randomX + "px";
+            targetObject.style.top = randomY + "px";
+        }
+
+        // 點擊指定物件時增加分數
+        targetObject.addEventListener("click", function() {
+            score++;
+            scoreDisplay.textContent = score;
+            generateRandomPosition(); // 點擊後重新生成物件位置
+        });
+
+        // 初始生成指定物件位置
+        generateRandomPosition();
+    </script>
+</body>
+</html>
