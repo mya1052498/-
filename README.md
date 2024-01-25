@@ -14,4 +14,5 @@
 ## 2024.1.25 day2
 ~~媽的上完班頭有夠痛，暈到一個不行什麼都吃不了，還一直嘔吐。罷工!~~
 ## 2024.1.26 day3
-研究Adobe xd怎麼用。
+研究Adobe xd怎麼用。找到`windows` `office` `adobe` 各版本破解
+[快克資源](https://crackedresource.com/)
