@@ -1,0 +1,61 @@
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 560;
+    font-style: normal;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+}
+canvas{
+    z-index: -10;
+    background-color: #6d6d6d8c;
+}
+.homepage_container{
+    border: 1px solid red;
+    z-index: 1;
+    /* opacity: 0.5; */
+    position: absolute;
+    width: 500px;
+    /* height: 500px; */
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}.logo_container{
+    width: 200px;
+    margin: 0 auto;
+}.menu_container{
+    border: 1px dotted ;
+}.menu_container ul{
+
+}.menu_container li{
+    position: relative;
+    height: 108px;
+    width: 240px;
+    margin: 0 auto;
+}.menu_container li img{
+    position: absolute;
+}.menu_container a{
+    width: 100%;
+}.menu_container li span{
+    position: absolute;
+    width: 240px;
+    text-align: center;
+    line-height: 108px;
+}.menu_container a:hover{
+    color: rgb(172, 172, 172);
+}.homepage_container{
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    pointer-events:all;
+}
+.hidn{
+    opacity: 0;
+}
