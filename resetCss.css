@@ -53,4 +53,8 @@ table {
 
 a{
 	text-decoration: none;
+}a:link{
+	color: rgb(43, 43, 43);
+}a:visited{
+	color: rgb(43, 43, 43);
 }

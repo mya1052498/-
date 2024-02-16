@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    #startButton {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 999;
+    }
+    .message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: none;
+        z-index: 1000;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <button id="startButton">遊戲開始</button>
+    <div class="overlay"></div>
+    <div class="message">
+        <h2>下一個畫面</h2>
+    </div>
+</div>
+
+<script>
+    document.getElementById("startButton").addEventListener("click", function() {
+        var overlay = document.querySelector(".overlay");
+        var message = document.querySelector(".message");
+
+        // 使背景變暗
+        overlay.style.display = "block";
+        // 使物件變透明
+        document.body.style.opacity = "0.5";
+
+        // 顯示下一個畫面
+        message.style.display = "block";
+
+        // 模擬切換到下一個畫面的操作，這裡使用setTimeout模擬延遲
+        setTimeout(function() {
+            window.location.href = "next_page.html"; // 將網頁切換到下一個畫面
+        }, 2000); // 2000毫秒（2秒）後切換
+    });
+</script>
+
+</body>
+</html>

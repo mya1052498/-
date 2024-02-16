@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resetCss.css">
+    <link rel="stylesheet" href="1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: "Noto Sans TC", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 560;
+            font-style: normal;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        *{
+            margin: 0;
+        }
+        canvas{
+            z-index: -10;
+            background-color: #6d6d6d8c;
+        }
+        .homepage_container{
+            border: 1px solid red;
+            z-index: 1;
+            /* opacity: 0.5; */
+            position: absolute;
+            width: 500px;
+            /* height: 500px; */
+            top: 0; bottom: 0; left: 0; right: 0;
+            margin: auto;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }.logo_container{
+            width: 200px;
+            margin: 0 auto;
+        }.menu_container{
+            border: 1px dotted ;
+        }.menu_container ul{
+
+        }.menu_container li{
+            position: relative;
+            height: 108px;
+            width: 240px;
+            margin: 0 auto;
+        }.menu_container li img{
+            position: absolute;
+        }.menu_container a{
+            width: 100%;
+            opacity: 1;
+            transition: opacity 2s ease-in-out;
+            pointer-events:all;
+        }.menu_container li span{
+            position: absolute;
+            width: 240px;
+            text-align: center;
+            line-height: 108px;
+        }.menu_container a:hover{
+            color: rgb(172, 172, 172);
+        }
+    </style>
+    <link rel="stylesheet" href="1.js">
+</head>
+<body>
+    <div class="homepage_container" id="homepage_container">
+        <div class="logo_container"><img src="image/LOGO.png" alt="LOGO" style="width: 100%;"></div>
+        <div class="menu_container">
+            <!-- <ul>
+                <li><a href="#" id="gameStrat"><img src="image/btn_start.8303afe7.png" alt="start"><span>遊戲開始</span></a></li>
+                <li><a href="#"><img src="image/btn_start.8303afe7.png" alt="setting"><span>遊戲設定</span</a></li>
+                <li><a href="#"><img src="image/btn_start.8303afe7.png" alt="Leave"><span>離開</span></a></li>
+            </ul> -->
+            <ul>
+                <li><button><img src="" alt=""><span></span></button></li>
+                <li><button><img src="" alt=""><span></span></button></li>
+                <li><button><img src="" alt=""><span></span></button></li>
+            </ul>
+        </div>
+    </div>
+    <canvas id="myCanvas" width="1920" height="959" style="width: 100%; height: 100%;"></canvas>
+<script>
+    
+</script>
+<link rel="stylesheet" href="1.js">
+</body>
+</html>
