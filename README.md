@@ -16,3 +16,13 @@
 ## 2024.1.26 day3
 研究Adobe xd怎麼用。找到`windows` `office` `adobe` 各版本破解
 [快克資源](https://crackedresource.com/)
+## 2024.2.14 day4
+~~寫JavaScript真是會氣死~~  
+基於對JS這程式的debug的速度過慢，已經會超出遊戲程式完成的預期時間，所以執行B計劃。  
+開始用Unity製作遊戲，慢慢開始學著用Unity可能比用JS寫後debug速度還快。  
+對於JavaScript理解程度還屬於初學者大概吧?~~或更遭~~
+## 2024.2.26 day5
+已經用Unity製作有段時間了，感覺上還行。
+就有個問題新增字體的部分有點問題，目前暫且先用英文。
+![畫面1](/README_img/photo_2024-02-26_22-31-36.jpg)
+![畫面2](/README_img/photo_2024-02-26_22-31-04.jpg)
